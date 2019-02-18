@@ -9,6 +9,9 @@
     <% end %>
 -->
 
-<% @pages.each do |item| %>
-    <p><%= item.title %></p>
+<% @pages.each do |page| %>
+    <p><%= link_to page.title, page_path(page) %></p>
+    <!--<p><%= page.title %></p>-->
 <% end %>
+
+<%= link_to "New Page", new_page_path %>
